@@ -34,3 +34,5 @@ The caller generates the task ID using crypto.randomUUID() rather than the reduc
 The filtered task list and status counts are derived during rendering instead of being stored in state to maintain a single source of truth. Storing filteredTasks or counts separately would risk synchronization bugs—for instance, deleting a task or advancing its status could update tasks while leaving the stored counts or visible list stale and out of sync.
 
 Moving filter into the reducer state alongside tasks made state transitions centralized and predictable. Rather than coordinating multiple useState hooks across components, every user interaction is modeled explicitly as an action, making the entire state lifecycle self-contained and easy to verify in unit tests.
+
+https://github.com/kaankysr/assignment3
